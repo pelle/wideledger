@@ -40,40 +40,51 @@ Further dataformats supported are xml,csv and json.
 
 h2. Data Elements
 
-|_. Element|_. Format|_. Required?|_. Description|
-|id|url|Y|The unique url for the transaction|
-|account|url||The account for the entry|
-|timestamp|timestamp |Y|The transaction date|
-|currency|iso currencycode||The Currency of the transaction|
-|amount|number|Y|The amount of the transaction|
-|type|url||A URL describing the kind of transaction|
-|memo|text||Description of transaction|
+h3. Ledger
 
-h3. id
+The Ledger element contains entries and shared information about the ledger.
+
+h3. Entry Data
+
+The entry data forms the core data in the ledger.
+
+<table>
+  <tr><th>Element</th><th>Format</th><th>Required?</th><th>Description</th></tr>
+  <tr><td>id</td><td>url</td><td>Y</td><td>The unique url for the transaction<td></tr>
+  <tr><td>account</td><td>url</td><td>&nbsp;</td><td>The account for the entry<td></tr>
+  <tr><td>account vcard</td><td>contact data</td><td>&nbsp;</td><td>Contact data for entry.<td></tr>    
+  <tr><td>timestamp</td><td>timestamp </td><td>Y</td><td>The transaction date<td></tr>
+  <tr><td>currency</td><td>iso currencycode</td><td>&nbsp;</td><td>The Currency of the transaction<td></tr>
+  <tr><td>amount</td><td>number</td><td>Y</td><td>The amount of the transaction<td></tr>
+  <tr><td>type</td><td>url</td><td>&nbsp;</td><td>A URL describing the kind of transaction<td></tr>
+  <tr><td>memo</td><td>text</td><td>&nbsp;</td><td>Description of transaction<td></tr>
+</table>
+
+h4. entry-id
 
 Each transaction has a unique url. This MUST be a valid http/https url. Following it up should contain further information regarding the transaction.
 
-h3. account
+h4. account
 
 Accounts are specified using a url. If the account is the Reporter's own account it SHOULD be specified as the url of that site. User URL's can be their own url's, email addresses or account page url's within the reporters site.
 
-h3. timestamp
+h4. timestamp
 
-Timestamp's are specified using "ISO-8601"http://microformats.org/wiki/iso-8601 format.
+Timestamp's are specified using "ISO-8601":http://microformats.org/wiki/iso-8601 format.
 
-h3. currency
+h4. currency
 
 Currency codes are specified as "ISO currency codes":http://en.wikipedia.org/wiki/ISO_4217
 
-h3. amount
+h4. amount
 
-Amounts are specified as positive or negative values and can be any precision. Negative values are specified with a - (minus) sign.
+Amounts are specified as positive or negative values and can be any precision. Negative values are specified with a - (minus) sign. Currency signs and other text SHOULD be ignored.
 
-h3. type
+h4. type
 
 Type is a url describing the class of product or service this was. A web service could use a unique url for each service plan they sell. If it is a product, it's product page.
 
-h3. memo
+h4. memo
 
 The memo field describes briefly the transaction. This SHOULD be limited to 256 characters.
 
