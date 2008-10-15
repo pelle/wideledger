@@ -1,0 +1,79 @@
+h1. WideLedger
+
+Distributed Financial Data Exchange
+
+h2. About
+
+Financial data is everywhere and increasing everyday, yet outside the enterprise domain sharing that data has almost never been more difficult than it is today. There is a real need for a common standard reporting transaction data between all the different applications small businesses and individuals use today.
+
+"OAuth":http://oauth.net has recently been developed as a standard which solves the trust and authentication aspects of sharing private confidential data. HTTP solves moving and subscribing to data so near realtime information can become widely available. XMPP could be harnessed to create real time data streams. The only thing missing is a simple easy data format. This is what WideLedger aims to define.
+
+h2. Use Cases
+
+h3. Small Business Use Case
+
+ZYX LLC is a small design firm. ZYX use AccountsRus to manage their accounts. ZYX subscribe to the BasePack project management web site and pay $49 monthly. BasePack provides a wideledger feed of XYZ's monthly invoices. Bill a co-owner of ZYX tells AccountsRus to subscribe to BasePack's wideledger feed. AccountsRus connects to BasePack and Bill gives them permission to access their data. After this AccountsRus automatically receives and records monthly expenses.
+
+h3. Web Startup
+
+48 Vibrations LLC a web startup in Detroit operate BasePack, which is a web service offering paid monthly subscriptions. They developed their application so it offers WideLedger data to both their clients and to themselves. They use VibrAccount a web based accounting system to manage their books and taxes. Jane one of the partners in 48 Vibrations goes to VibrAccounts web site and tell it to subscribe to data from their web site with the URL provided to her by one of their developers. VibrAccounts connects to the 48 Vibrations admin site and Jane gives them permission to subscribe to the sales data. From now on VibrAccounts contains near real time data of their sales.
+
+h2. Philosophy
+
+Almost all transaction data can be modelled in a ledger format. This should be as generic and straight forwards as possible. It should also be open for additional data to be embedded for industry specific data. It is of vital importance that the specification be as simple and generic as possible.
+
+h2. Roles
+
+There are 3 main types of roles in the general WideLedger data flow. 
+
+* Data owner - The end user or business who owns the data (eg. ZYX LLC in the Small Business Use Case above)
+* Reporter - The web service who provides the transaction data (eg. BasePack)
+* Collector - Accounting or other software that gathers and aggregates the data from the reporter on the behalf of the data owner (eg. AccountsRus)
+
+h2. Underlying Data Formats
+
+All underlying formats should support the same basic data elements, which will be defined later.
+
+A reporting web site MUST support "microformatted":http://microformats.org html. This technique allows you to transparently mark data elements on an existing web page using CSS class names. This allows any site with existing financial data to implement WideLedger in half an hour.
+
+Further dataformats supported are xml,csv and json.
+
+h2. Data Elements
+
+|_. Element|_. Format|_. Required?|_. Description|
+|id|url|Y|The unique url for the transaction|
+|account|url||The account for the entry|
+|timestamp|timestamp |Y|The transaction date|
+|currency|iso currencycode||The Currency of the transaction|
+|amount|number|Y|The amount of the transaction|
+|type|url||A URL describing the kind of transaction|
+|memo|text||Description of transaction|
+
+h3. id
+
+Each transaction has a unique url. This MUST be a valid http/https url. Following it up should contain further information regarding the transaction.
+
+h3. account
+
+Accounts are specified using a url. If the account is the Reporter's own account it SHOULD be specified as the url of that site. User URL's can be their own url's, email addresses or account page url's within the reporters site.
+
+h3. timestamp
+
+Timestamp's are specified using "ISO-8601"http://microformats.org/wiki/iso-8601 format.
+
+h3. currency
+
+Currency codes are specified as "ISO currency codes":http://en.wikipedia.org/wiki/ISO_4217
+
+h3. amount
+
+Amounts are specified as positive or negative values and can be any precision. Negative values are specified with a - (minus) sign.
+
+h3. type
+
+Type is a url describing the class of product or service this was. A web service could use a unique url for each service plan they sell. If it is a product, it's product page.
+
+h3. memo
+
+The memo field describes briefly the transaction. This SHOULD be limited to 256 characters.
+
