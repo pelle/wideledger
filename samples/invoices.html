@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>October Sales for BasePack</title>
+  <title>Your BasePack invoices</title>
   <link rel="stylesheet" href="../css/boilerplate.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
 </head>
 <body>
@@ -14,39 +14,51 @@
       <li><a href="http://github.com/pelle/wideledger/tree/master">GitHub</a></li>
     </ul>
     
-    <h1>October sales for BasePack</h1>
+    <h1>Invoices for XYZ LLC</h1>
     <table class="widel-ledger">
       <tr><th>Invoice</th><th>Account</th><th>Date</th><th>Service</th><th>Currency</th><th>Amount</th><th>Description</th></tr>
       <tr class="widel-entry">
-        <td><a href="http://basepack.inv/invoices/1" class="widel-entry-id">1</a></td>
+        <td><a href="http://basepack.inv/invoices/1101" class="widel-entry-id">101</a></td>
         <td><a href="http://basepack.inv/accounts/10" class="widel-account">XYZ LLC</a></td>
-        <td class="widel-timestamp" title="2008-10-11T14:03:33Z">10/11/2008</td>
+        <td class="widel-timestamp" title="2008-08-11T14:03:33Z">08/11/2008</td>
         <td><a href="http://basepack.inv/plans/pro" class="widel-type">Pro Subscription</a></td>
         <td class="widel-currency">USD</td>
         <td class="widel-amount">$49.00</td>
         <td class="widel-memo">August Subscription</td>
       </tr>
-      <tr>
-        <td><a href="http://basepack.inv/invoices/2" class="widel-id">2</a></td>
-        <td><a href="http://basepack.inv/accounts/11" class="widel-account">ABC Inv</a></td>
-        <td class="widel-timestamp" title="2008-10-11T14:03:33Z">10/11/2008</td>
-        <td><a href="http://basepack.inv/plans/enterprise" class="widel-type">Enterprise Subscription</a></td>
+      <tr class="widel-entry">
+        <td><a href="http://basepack.inv/invoices/112" class="widel-entry-id">112</a></td>
+        <td><a href="http://basepack.inv/accounts/10" class="widel-account">XYZ LLC</a></td>
+        <td class="widel-timestamp" title="2008-09-11T14:03:33Z">09/11/2008</td>
+        <td><a href="http://basepack.inv/plans/pro" class="widel-type">Pro Subscription</a></td>
         <td class="widel-currency">USD</td>
-        <td class="widel-amount">$99.00</td>
-        <td class="widel-memo">August Subscription</td>
+        <td class="widel-amount">$49.00</td>
+        <td class="widel-memo">September Subscription</td>
+      </tr>
+      <tr class="widel-entry">
+        <td><a href="http://basepack.inv/invoices/123" class="widel-entry-id">123</a></td>
+        <td><a href="http://basepack.inv/accounts/10" class="widel-account">XYZ LLC</a></td>
+        <td class="widel-timestamp" title="2008-10-11T14:03:33Z">10/11/2008</td>
+        <td><a href="http://basepack.inv/plans/pro" class="widel-type">Pro Subscription</a></td>
+        <td class="widel-currency">USD</td>
+        <td class="widel-amount">$49.00</td>
+        <td class="widel-memo">October Subscription</td>
       </tr>
       <tfoot>
         <tr>
         <th colspan="2">Total</th>
-        <th>10/1/2008-10/31/2008</th>
-        <th>USD</th>
+        <th>8/1/2008-10/31/2008</th>
         <th>&nbsp;</th>
-        <th class="widel-balance">$148.00</th>
+        <th>USD</th>        
+        <th class="widel-balance">$147.00</th>
         <th><a href="#" class="recalculate">Recalculate</a></th>
       </tfoot>
+      
     </table>
   </div>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
   <script type="text/javascript" src="../javascript/ledger.js"></script>
+  
+  
 </body>
 </html>
