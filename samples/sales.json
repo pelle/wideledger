@@ -1,0 +1,34 @@
+[
+  {
+    id: 1,
+    url: "http://basepack.inv/invoices/1",
+    date: "2008-10-11T14:03:33Z",
+    currency: "USD",
+    amount: 49.00,
+    memo: "August Subscription",
+    payee: {
+      name: "XYZ LLC",
+      url: "http://basepack.inv/accounts/10"
+    },
+    account: {
+      name: "Pro Subscription",
+      url: "http://basepack.inv/plans/pro"
+    }
+  },
+  {
+    id: 2,
+    url: "http://basepack.inv/invoices/2",
+    date: "2008-10-11T14:03:33Z",
+    currency: "USD",
+    amount: 99.00,
+    memo: "August Subscription",
+    payee: {
+      name: "ABC Inv",
+      url: "http://basepack.inv/accounts/11"
+    },
+    account: {
+      name: "Enterprise Subscription",
+      url: "http://basepack.inv/plans/enterprise"
+    }
+  }
+]

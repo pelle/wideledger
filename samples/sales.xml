@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<txns>
+  <txn>
+    <id>1</id>
+    <url>http://basepack.inv/invoices/1</url>
+    <date>2008-10-11T14:03:33Z</date>
+    <amount currency="USD">49.00</amount>
+    <memo>August Subscription</memo>
+    <payee>
+      <name>XYZ LLC</name>
+      <url>http://basepack.inv/accounts/10</url>
+    </payee>
+    <account>
+      <name>Pro Subscription</name>
+      <url>http://basepack.inv/plans/pro</url>
+    </account>
+  </txn>
+  <txn>
+    <id>2</id>
+    <url>http://basepack.inv/invoices/2</url>
+    <date>2008-10-11T14:03:33Z</date>
+    <amount currency="USD">99.00</amount>
+    <memo>August Subscription</memo>
+    <payee>
+      <name>ABC Inv</name>
+      <url>http://basepack.inv/accounts/11</url>
+    </payee>
+    <account>
+      <name>Enterprise Subscription</name>
+      <url>http://basepack.inv/plans/enterprise</url>
+    </account>
+  </txn>
+</txns>
